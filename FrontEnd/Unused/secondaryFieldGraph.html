@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="../styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='../styles/phone.css' />
+
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onLoad="javascript:toggleClock()">
+	<header>
+		<h1 style="color:black;"><i> AI Research Community </h1>
+		
+	</header>
+  <div class="topnav">
+		<a href="../index.html" ><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"<b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../ResearcherInterfaces/ViewAllResearchers.html"class="active"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="../ResearcherInterfaces/institutionGraph.html">Researchers by Institutions</a>
+        <a href="../ResearcherInterfaces/primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="../ResearcherInterfaces/secondaryFieldGraph.html"><i>Researchers by Secondary Field</i></a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        
+        <a href="articlegraphtrends.html">Research article trends</a>
+       <a href="secondaryFieldGraph.html"><i>Researchers by Secondary Field</i></a>
+      </div>	
+    </div>
+  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+          <h4>Statistics overtime for the South African AI community </h4>
+          
+     
+       <h4> <p><i class="arrow left" style="color:black; "onclick="leftswap()"></i>
+       <label id ="page" style="color:black; ">page 1/3</label>
+        <i class="arrow right"style="color:black; " onclick="rightswap()"></i></p></h4>
+          
+     
+  <div class="fullcenter">     
+    <div id="current_column"style="height:100%;">
+      <p><h5>Ratings for the most common specialisations/topics: </h5></p>
+      <div class="iGraph" id="1">
+        <canvas id="specialisationRatingCount" style="  width:45%; height:100%;"></canvas>
+      </div>
+          
+    </div>
+        
+        <!-- create a form-->
+        
+    <div id="coming_soon_column"style="height:100%;">
+      <p><h5>Ratings per year: </h5></p>
+      <div class="iGraph"id="3">
+            
+        <canvas id="ratingPerYear" style=" width:45%; height:100%;"></canvas>
+      </div>
+    </div>
+    <div id="current_column2"style="height:100%;">
+      <p><h5>Total number of publications over time: </h5></p>
+      <div class="iGraph" id="2">
+        <canvas id="publicationsPerYear" style=" width:100%; height:100%;"></canvas>
+      </div>
+    </div>
+        
+        <!-- create a form-->
+        
+    <div id="coming_soon_column2"style="height:100%;">
+      <p><h5>Total number of researchers over time: </h5></p>
+      <div class="iGraph" id="4">
+        <canvas id="publicationsVsTime" style=" width:100%; height:120%;"></canvas>
+      </div>
+    </div>
+    <div id="current_column3"style="height:100%;">
+      <p><h5>Publication Year vs Number of times cited</h5></p>
+      <div class="iGraph" id="2">
+        <canvas id="mostCitedPerYear" style=" width:30%;"></canvas>
+      </div>
+    </div>
+        
+        <!-- create a form-->
+    <div id="coming_soon_column3"style="height:100%;">
+      <p><h5>Most Cited Research Titles</h5></p>
+      <div class="iGraph" id="4">
+            <canvas id="sourceTitleVsCited" style="width: 100%; height: 150%"></canvas>
+      </div>
+    </div>
+    <div class="backContainer" id="backContainer">
+      <p><h5>Most Popular Research Titles</h5></p>
+      <div class="container">
+        <div class= "personContainer" id="personContainer">
+          <div class="iGraph">
+            
+            <canvas id="mostPopularResearchTitles" style=" width: 20%; height:20%"></canvas>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+ 
+
+
+    <script src="graphs.js"> </script>
+</body>
+</html>

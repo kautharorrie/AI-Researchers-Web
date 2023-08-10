@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="../styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='../styles/phone.css' />
+
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onLoad="javascript:RatingPrimaryField()">
+	<header>
+		<h1 style="color:black;"><i> AI Research Community </h1>
+		
+	</header>
+  <div class="topnav">
+		<a href="../index.html" ><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"<b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../ResearcherInterfaces/ViewAllResearchers.html"class="active"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="../ResearcherInterfaces/institutionGraph.html">Researchers by Institutions</a>
+        <a href="../ResearcherInterfaces/primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="../ResearcherInterfaces/secondaryFieldGraph.html"><i>Researchers by Secondary Field</i></a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        
+        <a href="articlegraphtrends.html">Research article trends</a>
+        <a href="institutionGraph.html">Researchers by Institutions</a>
+        <a href="primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="secondaryFieldGraph.html"><i>Researchers by Secondary Field</i></a>
+      </div>	
+    </div>
+  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+      <div class="center">
+        <div>
+          <!-- biggest header-->
+          <p><h3>Statistics on the AI Research Primary Fields!</h3></p>
+           
+      </div></div>
+ 
+
+  <div class="institutioncenter">
+    <!-- institution count graph -->
+    <div class="iGraph">
+      <p>Total number of publications over time: </p>
+      <canvas id="publicationsPerYear" style="position:absolute;  width:100%; height:100%;"></canvas>
+    </div>
+  </div>
+
+
+<script src="graphs.js"> </script>
+</body>
+</html>

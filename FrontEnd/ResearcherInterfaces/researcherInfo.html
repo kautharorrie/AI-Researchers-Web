@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="../styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='../styles/phone.css' />
+
+    <title>AI Research Community</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onLoad="javascript:RatingSecondaryField()">
+		<h1 style="color:black;"><i> AI Research Community </h1>
+		
+  <div class="topnav">
+    <a href="../index.html" ><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ViewAllResearchers.html"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+       
+       
+        <a href="institutionGraph.html">Researchers by Institutions</a>
+        <a href="primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="secondaryFieldGraph.html">Researchers by Secondary Field</a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../ArticleInterfaces/ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="../ArticleInterfaces/articlegraphtrends.html">Research article trends</a>
+       
+      </div>	
+    </div>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>      <div class="center">
+  <div>
+    <!-- biggest header-->
+    <p><h3> More Information about the Researcher...</h3></p>
+    <p id="message"> Click on the article to get more information...</p>
+     
+</div></div>
+
+    <!-- biggest header-->
+    <div class="backContainer">
+        <div class="container">
+      <div class= "personContainer" id="personContainer">
+        <table id="personTable" title="Click on record on the table to view more information">
+          <tr>
+            <th>ID</th>
+            <th>Article Title</th>
+            <th>Authors</th>
+            <th>Publication</th>
+            <th>Source Title</th>
+            <th>Author Keywords</th>
+            <th>Publication Year</th>
+            <th>DOI Link</th>
+                   
+          </tr>
+          <tr>
+            <td id="articleID"></td>
+            <td id="articleTitle" ></td>
+            <td id="articleAuthors"></td>
+            <td id="articlePublication"></td>
+            <td id="articleSourceTitle"></td>
+            <td id="articleKeyWords"></td>
+            <td id="articlePublisherYear"></td>
+            <td id="articleDOILink" style="color: blue;"></td>         
+          </tr>
+        </table>
+      </div>
+    </div>
+      </div>
+    </div>
+     
+
+
+
+
+
+
+
+    <script src="researcherInfo.js"> </script>
+
+</body>
+</html>

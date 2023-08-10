@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='phone.css' />
+
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<h1 style="color:black;"><i> AI Research Community </h1>
+		
+	</header>
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" ><b>Home</b></a>
+   
+		<div class="dropdown">
+      <button class="dropbtn"><b>Statistics</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ratingsGraph.html"><i>Researchers by Ratings</i></a>
+        <a href="institutionGraph.html"><i>Researchers by Institutions</i></a>
+        <a href="primaryFieldGraph.html"><i>Researchers by Primary Field</i></a>
+      </div><a href="AboutUs.html"><b>About Us</b></a>
+		<a href="Contact.html"><b>Contact</b></a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  	</div>
+<body>
+    <h1>
+        <!-- biggest header-->
+        <p><u>"Welcome to AI community website! " </u></p>
+          <script> document.write() </script>
+    </h1>
+ 
+
+    <div class="form-center">
+    <!-- institution count graph -->
+    <div style=" width:80%; height:auto;">
+      <canvas id="institutionCount"></canvas>
+    </div>
+  </div>
+  <div class="form-center">
+     <!-- rating count graph-->
+     <div style=" width:75%; height:auto;">
+      <canvas id="ratingCount"></canvas>
+    </div>
+  </div>
+  <div class="form-center">
+    <!-- primary field count graph-->
+    <div style=" width:50%; height:auto;">
+      <canvas id="primaryFieldCount"></canvas>
+    </div>
+  </div>
+  <div class="form-center">
+    <!-- secondary field count graph-->
+    <div style=" width:90%; height:auto;">
+      <canvas id="secondaryFieldCount"></canvas>
+    </div>
+  </div>
+
+    <script src="graphs.js"> </script>
+</body>
+</html>

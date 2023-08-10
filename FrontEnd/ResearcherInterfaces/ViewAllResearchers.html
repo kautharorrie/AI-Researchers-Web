@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="../styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='../styles/phone.css' />
+
+    <title>AI Research Community</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type='text/javascript'>
+      window.onload=function(){
+      var rows = document.getElementsByTagName("tr");
+          for (var i = 0; i < rows.length; i++)
+          {
+              rows[i].onclick = function() {
+                 console.log(this);
+              };
+          }
+      }
+      </script>
+</head>
+
+<body onLoad="javascript:LoadAll()">
+		<h1 style="color:black;"><i> AI Research Community</i> </h1>
+  
+  <div class="topnav">
+		<a href="../index.html" ><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ViewAllResearchers.html"class="active"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+       
+        <a href="institutionGraph.html">Researchers by Institutions</a>
+        <a href="primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="secondaryFieldGraph.html"><i>Researchers by Secondary Field</i></a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../ArticleInterfaces/ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="../ArticleInterfaces/articlegraphtrends.html">Research article trends</a>
+        
+      </div>	
+    </div>
+  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="backContainer"style="background:rgb(255, 255, 255);">
+  <div class="container"style="background:rgb(255, 255, 255);" >
+    <a style="color:rgba(0, 3, 34, 0.812); margin-right:25%;"><u>All AI Researchers: </u></a> <!-- biggest header-->
+    <form class="searchForm" id="searchForm">
+      <div class="formTitle" style="color:rgba(0, 3, 34, 0.812);">Search Researchers by Surname:</div>
+     
+      <input id="inputName" type="text"> 
+      <input id="submit" type="submit" title="Click to search for researcher name">
+    </form>
+  </div></div>
+  <div class="backContainer">
+    <div class="container">
+    
+      <div class="grid-container">
+        <div class="item1i" title="Click to select a rating">Rating</div>
+        <div class="item2r"title="Click to select a institution ">Institution</div>
+        <div class="item3f" title="Click to select a field">Field</div>  
+        <div class="item4s" title="Click to select a Specialisation">Specialisation </div>
+        <div class="item5ai" title="Click to select a rating"><select id="arrRating"title="Click to select a rating"></select></div>
+        <div class="item6ar" title="Click to select a institution "><select id="arrIn"title="Click to select a institution "></select></div>
+        <div class="item7af" title="Click to select a field">  <select id="arrField" title="Click to select a field"></select></div>
+        <div class="item8as" title="Click to select a Specialisation">  <select id="arr" title="Click to select a Specialisation"></select></div>   
+      </div>
+    </div>
+  </div>
+  <div class="backContainer">
+  <div class="container">
+    <div class="center">
+      <div class="item9"><button id="filter" title="Click to load filters" onclick="sendRequest();" type="button" style="background-color:green; color:white; "><b>Load Filters</b></button></div>
+      <div class="item10"><button id="View_All" title="Click to view all records or reset" type="button" style="background-color:green; color:white"><b>Reset</b></button></div>
+    </div></div>
+  </div>
+  
+    <div class="backContainer">
+      <div class="container">
+    <div class= "personContainer" id="personContainer">
+      <table id="personTable"  class="personTable" title="Click on Researcher to view their articles">
+        <tr>
+          <th>ID</th>
+          <th>Surname</th>
+          <th>Initials</th>
+          <th>Title</th>
+          <th>Institution</th>
+          <th>Rating</th>
+          <th>Rating Start Date</th>
+          <th>Rating End Date</th>
+          <th>Primary Fields</th>
+          <th>Secondary Fields</th>
+          <th>Specialisations</th>    
+             
+        </tr>
+        
+        <tr >
+          
+          <td id="researcherID"></td>
+          <td id="personSurname"></td>
+          <td id="personIntials"></td>
+          <td id="personTitle" ></td>
+          <td id="personInstitution"></td>
+          <td id="personRating"></td>
+          <td id="ratingStartDate"></td>
+          <td id="ratingEndDate"></td>
+          <td id="personPFields"></td>
+          <td id="personSField"></td>
+          <td id="personSpecialisations"></td>    
+        
+        </tr>
+     
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="ViewAllResearchers.js">
+  
+
+  </script>  
+
+</body>
+</html>

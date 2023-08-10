@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='styles/phone.css' />
+
+    <title>AI Research Community</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body style="background-image:url('../AIHomePic.jpg');
+background-size: cover;
+grid-template-columns: auto;">
+	<header>
+		<h1 style="color:black;"><b><i> AI Research Community <b></h1>
+		
+	</header>
+	<div class="topnav">
+		<a href="index.html" class="active"><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ResearcherInterfaces/ViewAllResearchers.html"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+
+        <a href="ResearcherInterfaces/institutionGraph.html">Researchers by Institutions</a>
+        <a href="ResearcherInterfaces/primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="ResearcherInterfaces/secondaryFieldGraph.html"><i>Researchers by Secondary Field</i></a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ArticleInterfaces/ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="ArticleInterfaces/articlegraphtrends.html">Research article trends</a>
+    
+      </div>	
+    </div>
+  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="center">
+  <div>
+        <!-- biggest header-->
+        <p><u><h3>Welcome to the South African AI Community!</h3> </u></p>
+  </div>
+</div>
+
+
+<div class="institutioncenter">
+  <!-- institution count graph -->
+  <div class= "institutionContainer"id="institutionContainer">
+    <p><font size="+3">About the South African AI Research Community</font></p>
+  
+    <p>
+      <font size="+1.5"> This website provides a dynamic overview of recent trends within the AI community so that you can engage with the data at a glance.
+        Navigate through the tabs to view the statistics that we have curated and calculated in order to introduce you to the state of AI research in South Africa.
+      </font>
+    </p>
+   <br>
+ <label class="labelre" style="font-size: 1.5vw;">All Researchers</label>
+  <label class="labelar" style="font-size: 1.5vw;"> All Articles</label>
+    <a href='ResearcherInterfaces/ViewAllResearchers.html'><button class="button button1" title="Click on the button to view all researchers"></button></a>
+    <a href='ArticleInterfaces/ViewAllArticles.html'><button class="button button2" title="Click on the button to view all articles" ></button></a>
+    <br>
+    <dl>
+      <dt><font size="+2">Statistics on Researchers</font></dt>
+      
+      <dd><font size="+1"><a href="ResearcherInterfaces/institutionGraph.html">Statistics on Research Institutions</a></font></dd>
+      <dd><font size="+1"><a href="ResearcherInterfaces/primaryFieldGraph.html">Statistics on Research Primary Fields</a></font></dd>
+      <dd><font size="+1"><a href="ResearcherInterfaces/secondaryFieldGraph.html">Statistics on Research Secondary Fields</a></font></dd>
+      <p></p>
+      <p></p>
+      <dt><font size="+2">Statistics on Research Articles</font></dt>
+      
+
+      <dd><font size="+1"><a href="ArticleInterfaces/articlegraphtrends.html">Trends within the Research Community</a></font></dd>
+    </dl>
+   
+    
+  </div>
+  
+  
+  <div class="iGraph" style="color:black;">
+    
+    <p> The graph below shows the number of researchers for every NRF Rating</p>
+    <p>A- Leading international researchers 
+      <br> B- Internationally acclaimed researchers  
+      <br> C- Established researchers
+      <br> P- Prestigious Awards
+      <br> Y- Promising young researchers
+     </p>
+    <canvas id="ratingCount" style=" width: 20%; height:100%"></canvas>
+
+  </div>
+
+  <script src="index.js"> </script>
+</body>
+</html>

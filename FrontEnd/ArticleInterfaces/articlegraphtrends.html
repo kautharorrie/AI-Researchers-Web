@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="../styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='../styles/phone.css' />
+
+    <title>AI Research Community</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body onLoad="javascript:changeScreen()">
+		<h1 style="color:black;"><i> AI Research Community </h1>
+  <div class="topnav">
+		<a href="../index.html" ><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../ResearcherInterfaces/ViewAllResearchers.html"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="../ResearcherInterfaces/institutionGraph.html">Researchers by Institutions</a>
+        <a href="../ResearcherInterfaces/primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="../ResearcherInterfaces/secondaryFieldGraph.html">Researchers by Secondary Field</a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        
+        <a href="articlegraphtrends.html" class="active">Research article trends</a>
+       
+      </div>	
+    </div>
+  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+          <h4>Statistics overtime for the South African AI community </h4>
+          
+     
+       <h4> <p><i class="arrow left" title="Click to view previous page" style="color:black; "onclick="leftswap()"></i>
+       <label id ="page" style="color:black; ">page 1/3</label>
+        <i class="arrow right" title="Click to view next page"style="color:black; " onclick="rightswap()"></i></p></h4>
+          
+     
+  <div class="fullcenter">     
+    <div id="current_column"style="height:100%;">
+      <p><h5>Ratings for the most common specialisations/topics: </h5></p>
+      <p>This graph displays the ratings held by researchers with a given specialisation. As revealed below, machine learning attracted the greatest number of researchers overall. 
+      </p>
+      <div class="iGraph" id="1">
+        <canvas id="specialisationRatingCount" style="  width:25%; height:150%;"></canvas>
+      </div>
+          
+    </div>
+        
+        <!-- create a form-->
+        
+    <div id="coming_soon_column"style="height:100%;">
+      <p><h5>Ratings per year: </h5></p>
+      <p>This graph tracks the growth rate of the AI researcher community by displaying the number of new ratings awarded per year. C rated researchers have displayed the most consistent growth along with B and Y, whereas very few researchers have been given the title of A and P.
+      </p>
+      <div class="iGraph"id="3">
+        <canvas id="ratingPerYear" style=" width:25%; height:150%;"></canvas>
+      </div>
+    </div>
+    <div id="current_column2"style="height:100%;">
+      <p><h5>Total number of publications over time: </h5></p>
+      <p>This graph displays the increasing number of AI related publications per year.
+        </p>
+      <div class="iGraph" id="2">
+        <canvas id="publicationsPerYear" style=" width:50%; height:150%;"></canvas>
+      </div>
+    </div>
+        
+        <!-- create a form-->
+        
+    <div id="coming_soon_column2"style="height:100%;">
+      <p><h5>Total number of researchers over time: </h5></p>
+      <p>This graph tracks the total number of new AI researchers in South Africa per year from 2017 to 2022. The size of the community has increased consistently over time with a slight deviation from the trend in 2022.</p>
+      <div class="iGraph" id="4">
+        <canvas id="publicationsVsTime" style=" width:50%; height:120%;"></canvas>
+      </div>
+    </div>
+    <div id="current_column3"style="height:100%;">
+      <p><h5>Publication Year vs Number of times cited</h5></p>
+      <p>
+This graph displays the correlation between the publication year of an article and the number of times it was cited. As revealed below, newer articles are cited more frequently
+</p>
+      <div class="iGraph" id="2">
+        <canvas id="mostCitedPerYear" style=" width:30%; height: 150%;"></canvas>
+      </div>
+    </div>
+        
+        <!-- create a form-->
+    <div id="coming_soon_column3"style="height:100%;">
+      <p><h5>Most Cited Research Titles</h5></p>
+      <p>This graph displays the most cited research titles/areas, with Expert Systems with Applications gaining the most traction in the research community.</p>
+      <div class="iGraph" id="4">
+            <canvas id="sourceTitleVsCited" style="width: 20%; height: 20%"></canvas>
+      </div>
+    </div>
+    <div class="backContainer" id="backContainer">
+      <p><h5>Most Popular Research Titles</h5></p>
+      <p>This graph displays the most popular research articles in the AI Research community. The data reveals a similar trend to the previous graph however “most popular” refers to the number of times an article topic was referenced within the data.</p>
+      <div class="container">
+        <div class= "personContainer" id="personContainer">
+          <div class="iGraph">
+            
+            <canvas id="mostPopularResearchTitles" style=" width: 20%; height:20%"></canvas>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+ 
+
+
+    <script src="trends.js"> </script>
+</body>
+</html>

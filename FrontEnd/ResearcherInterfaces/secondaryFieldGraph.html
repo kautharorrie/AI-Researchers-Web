@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name= "MobileOptimized" content="320"/>
+  
+    <link rel="stylesheet" type="text/css" href="../styles/mystyle.css">
+    <link rel='stylesheet' type="text/css" media='screen and (max-width: 699px), (min-width:  1151px),(min-width: 700px)' href='../styles/phone.css' />
+
+    <title>AI Research Community</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type='text/javascript'>
+      window.onload=function(){
+      var rows = document.getElementsByTagName("tr");
+          for (var i = 0; i < rows.length; i++)
+          {
+              rows[i].onclick = function() {
+                 console.log(this);
+              };
+          }
+      }
+      </script>
+</head>
+
+<body onLoad="changeScreen()">
+  
+		<h1 style="color:black;"><i> AI Research Community</i> </h1>
+  
+
+  <div class="topnav">
+		<a href="../index.html" ><b>Home</b></a>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Researchers</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="ViewAllResearchers.html"><b>All Researchers</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+       
+        <a href="institutionGraph.html">Researchers by Institutions</a>
+        <a href="primaryFieldGraph.html">Researchers by Primary Field</a>
+        <a href="secondaryFieldGraph.html"class="active">Researchers by Secondary Field</a>
+      </div>	
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><b>Articles</b> 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../ArticleInterfaces/ViewAllArticles.html"><b>All Articles</b></a>
+        <div>
+          <!-- biggest header-->
+          <a><u>Statistics on : </u></a>
+            
+        </div>
+        <a href="../ArticleInterfaces/articlegraphtrends.html">Research article trends</a>
+        
+      </div>	
+    </div>
+  
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="center">
+  <div>
+    <!-- biggest header-->
+    <p><h3>Statistics on the Secondary Fields!</h3></p>
+     
+</div></div>
+<div class="center">
+<button onclick="changeScreen()" title="Click to change to table or graphs" class="changebtn" id="changebtn"></button>
+</div>
+<div class="fullcenter">
+<div id="current_column"style="height:100%;">
+  <h3>NRF Rating vs Secondary Field Graph</h3>
+  <p> The graph below shows the count for NRF rating A, B, C, P, Y for All Secondary Fields: </p>
+  <div class="iGraph">
+    
+    <canvas id="secondaryFieldsRatingCount" style="  width:10%; height:100%;"></canvas>
+  </div>
+
+</div>
+
+<!-- create a form-->
+
+<div id="coming_soon_column"style="height:100%;">
+  <h3>Total number of Researchers per Secondary Field</h3>
+    <p> The graph below shows the a count of the total number of researchers for every secondary field: </p>
+  
+  <div class="iGraph">
+    
+    <canvas id="secondaryFieldCount" style=" width:10.7%; height:100%;"></canvas>
+  </div>
+
+</div>
+
+
+</div>
+
+<div class="backContainer" id="backContainer">
+<div class="container">
+<div class= "personContainer" id="personContainer">
+<table id="ratingSecondaryFieldTable" >
+  <tr style="color:white;">
+    <th>ID</th>
+    <th>Secondary Field</th>
+    <th>A</th>
+    <th>B</th>
+    <th>C</th>
+    <th>Y</th>
+    <th>P</th>
+    <th>TOTAL</th> 
+
+  </tr>
+  <tr>
+    <td id="researcherID"></td>
+    <td id="secondaryField"></td>
+    <td id="instA"></td>
+    <td id="instB" ></td>
+    <td id="instC"></td>             
+    <td id="instY"></td>
+    <td id="instP"></td>
+    <td id="total"></td>             
+  </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="graphs.js"> </script>
+
+</body>
+</html>
